@@ -1,0 +1,29 @@
+[project]
+name = "example"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "google-auth~=2.0",
+    "google-cloud-storage~=2.0",
+    "lightning~=2.0",
+    "loguru~=0.1",
+    "mlflow~=2.0",
+    "typing-extensions~=4.0"
+]
+
+[dependency-groups]
+dev = [
+    "tomli~=2.0",
+]
+
+[tool.uv]
+environments = [
+    "sys_platform == 'darwin'",
+    "sys_platform == 'linux'",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
